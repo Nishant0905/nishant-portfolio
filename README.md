@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Nishant Sreekumar - Personal Portfolio
+This repository contains the source code for my personal portfolio website, designed to showcase my skills, projects, and professional experience in AI, Robotics, and Data Science.
 
-## Getting Started
+Live Site: nishant-portfolio.vercel.app
 
-First, run the development server:
+Note: You will need to take a screenshot of your live site and replace the URL above.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 Tech Stack
+This project was built using a modern, performant, and scalable technology stack:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Framework: Next.js (React Framework)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Language: TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Styling: Tailwind CSS
 
-## Learn More
+Contact Form: EmailJS for client-side email sending.
 
-To learn more about Next.js, take a look at the following resources:
+Deployment: Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✨ Features
+Fully Responsive Design: Adapts seamlessly to all screen sizes, from mobile to desktop.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Interactive UI: Smooth scrolling, active navigation links, and hover effects.
 
-## Deploy on Vercel
+Dynamic Content Sections: Dedicated sections for Professional Experience, Featured Projects, Skills, Certifications, and Achievements.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Functional Contact Form: Allows visitors to send messages directly to my inbox without a backend server.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hosted Resume: Direct link to a downloadable PDF version of my resume.
+
+☁️ Deployment & Analytics
+This portfolio is automatically deployed using the Vercel Platform. Every push to the main branch triggers a new build and deployment, ensuring the live site is always up-to-date with the latest changes.
+
