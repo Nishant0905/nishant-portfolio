@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'certificates', 'achievements', 'contact'];
+      const sections = ['home', 'experience', 'projects', 'skills', 'certificates', 'achievements', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -38,32 +38,23 @@ export default function Home() {
     }
   };
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('');
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
     
-    const templateParams = {
-      from_name: `${formData.get('firstName')} ${formData.get('lastName')}`,
-      from_email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message'),
-      to_name: 'Nishant Sreekumar',
-    };
-
     try {
-      // EmailJS Configuration
+      // NOTE: Replace with your actual EmailJS Service ID, Template ID, and Public Key
       const SERVICE_ID = 'service_ggsok4b';
       const TEMPLATE_ID = 'template_gdlvy88';
       const PUBLIC_KEY = 'HLYInVnyiiigTWXUT';
       
-      await emailjs.send(
+      await emailjs.sendForm(
         SERVICE_ID,
         TEMPLATE_ID,
-        templateParams,
+        form,
         PUBLIC_KEY
       );
       
@@ -159,18 +150,18 @@ export default function Home() {
             <div className="bg-gray-700 p-8 rounded-lg border border-gray-600 hover:border-blue-400 transition-colors duration-200">
               <h3 className="text-2xl font-bold mb-2 text-blue-400">Backend & ML Intern</h3>
               <p className="text-gray-300 mb-4">Bluestock Fintech (Remote)</p>
-              <ul className="text-gray-400 space-y-2">
-                <li>• Developed a full-stack IPO web app using Django REST and ReactJS</li>
-                <li>• Built a financial analysis ML platform with Flask</li>
-                <li>• Conducted API testing and managed deployment documentation</li>
+              <ul className="text-gray-400 space-y-2 list-disc list-inside">
+                <li>Developed a full-stack IPO web app using Django REST and ReactJS</li>
+                <li>Built a financial analysis ML platform with Flask</li>
+                <li>Conducted API testing and managed deployment documentation</li>
               </ul>
             </div>
             <div className="bg-gray-700 p-8 rounded-lg border border-gray-600 hover:border-blue-400 transition-colors duration-200">
               <h3 className="text-2xl font-bold mb-2 text-blue-400">JPMorgan Forage Virtual Internship</h3>
               <p className="text-gray-300 mb-4">Virtual Experience</p>
-              <ul className="text-gray-400 space-y-2">
-                <li>• Engineered a financial transaction simulator, 'Midas Core'</li>
-                <li>• Used Spring Boot, Apache Kafka, and SQL</li>
+              <ul className="text-gray-400 space-y-2 list-disc list-inside">
+                <li>Engineered a financial transaction simulator, &apos;Midas Core&apos;</li>
+                <li>Used Spring Boot, Apache Kafka, and SQL</li>
               </ul>
             </div>
           </div>
@@ -297,7 +288,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Comprehensive course covering essential business concepts and entrepreneurial skills from one of India's premier institutes.
+                Comprehensive course covering essential business concepts and entrepreneurial skills from one of India&apos;s premier institutes.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs">Entrepreneurship</span>
@@ -338,16 +329,16 @@ export default function Home() {
           <div className="space-y-6">
             <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">Research Papers</h3>
-              <ul className="text-gray-400 space-y-2">
-                <li>• CNN-Based Mango Leaf Disease Detection</li>
-                <li>• IoT-Based Automatic Soil Moisture Detection System (Simulation)</li>
+              <ul className="text-gray-400 space-y-2 list-disc list-inside">
+                <li>CNN-Based Mango Leaf Disease Detection</li>
+                <li>IoT-Based Automatic Soil Moisture Detection System (Simulation)</li>
               </ul>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">Competitions & Programs</h3>
-              <ul className="text-gray-400 space-y-2">
-                <li>• NCSRC Hackathon 2025 – Semi-finalist, recognized for 3 impactful vulnerabilities in state-level bug bounty round</li>
-                <li>• NASA Space Apps Hackathon 2024 – People's Choice Award Winner. Conceptualized solution for gender and climate action featuring educational tools and a marketplace for women artisans using React, Node.js, and Figma</li>
+              <ul className="text-gray-400 space-y-2 list-disc list-inside">
+                <li>NCSRC Hackathon 2025 – Semi-finalist, recognized for 3 impactful vulnerabilities in state-level bug bounty round</li>
+                <li>NASA Space Apps Hackathon 2024 – People&apos;s Choice Award Winner. Conceptualized solution for gender and climate action featuring educational tools and a marketplace for women artisans using React, Node.js, and Figma</li>
               </ul>
             </div>
           </div>
@@ -361,7 +352,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Let's Connect</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Let&apos;s Connect</h3>
               <p className="text-gray-400 mb-8">
                 Interested in collaborating or have a question? Feel free to reach out to me directly.
               </p>
@@ -488,7 +479,7 @@ export default function Home() {
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
                   <div className="bg-green-600 text-white p-4 rounded-lg text-center">
-                    <p>✅ Message sent successfully! I'll get back to you soon.</p>
+                    <p>✅ Message sent successfully! I&apos;ll get back to you soon.</p>
                   </div>
                 )}
                 {submitStatus === 'error' && (
