@@ -110,8 +110,8 @@ export default function Home() {
             AI & Robotics Engineer | Data Scientist
           </h2>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            B.Tech in AI & Robotics – Dayananda Sagar University<br />
-            BS in Data Science – IIT Madras
+            Persuing B.Tech in AI & Robotics – Dayananda Sagar University<br />
+            Persuing BS in Data Science – IIT Madras
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
